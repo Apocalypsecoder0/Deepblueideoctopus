@@ -1,0 +1,26 @@
+{
+  "server": {
+    "session": {
+      "secure": true
+    }
+  },
+  "security": {
+    "codeValidation": {
+      "strictMode": true,
+      "blockingThreshold": 30
+    }
+  },
+  "ui": {
+    "animations": {
+      "enabled": false
+    }
+  },
+  "monitoring": {
+    "logLevel": "error"
+  },
+  "external": {
+    "stripe": {
+      "enabled": true
+    }
+  }
+}

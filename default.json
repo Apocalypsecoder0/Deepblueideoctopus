@@ -1,0 +1,226 @@
+{
+  "app": {
+    "name": "DeepBlue:Octopus IDE",
+    "version": "2.1.0 Alpha",
+    "description": "Cross-Platform Game Development Environment",
+    "domain": "https://deepblueide.dev",
+    "author": "Stephen Deline Jr.",
+    "email": "stephend8846@gmail.com",
+    "github": "apocalypsecode0"
+  },
+  "server": {
+    "port": 5000,
+    "host": "0.0.0.0",
+    "cors": {
+      "origins": [
+        "http://localhost:3000",
+        "http://localhost:5000",
+        "https://deepblueide.dev",
+        "https://*.replit.app",
+        "https://*.replit.dev"
+      ],
+      "credentials": true
+    },
+    "session": {
+      "maxAge": 86400000,
+      "secure": false
+    },
+    "rateLimit": {
+      "windowMs": 900000,
+      "max": 1000
+    }
+  },
+  "security": {
+    "passwordPolicy": {
+      "minLength": 8,
+      "requireUppercase": true,
+      "requireLowercase": true,
+      "requireNumbers": true,
+      "requireSpecialChars": false
+    },
+    "authentication": {
+      "maxFailedAttempts": 5,
+      "lockoutDuration": 900000,
+      "tokenExpiry": 3600000
+    },
+    "codeValidation": {
+      "enabled": true,
+      "strictMode": true,
+      "blockingThreshold": 50,
+      "timeoutMs": 5000
+    }
+  },
+  "features": {
+    "aiAssistant": true,
+    "codeExecution": true,
+    "collaboration": true,
+    "gameEngine": true,
+    "mobileFramework": true,
+    "versionControl": true,
+    "cloudStorage": true,
+    "realTimePreview": true,
+    "advancedDebugging": true,
+    "multiLanguageSupport": true,
+    "betaAccess": true,
+    "adminPanel": true
+  },
+  "subscriptions": {
+    "free": {
+      "name": "Free Tier",
+      "price": 0,
+      "maxProjects": 5,
+      "maxStorage": "100MB",
+      "aiRequestsPerDay": 50,
+      "languageSupport": 10,
+      "features": [
+        "Basic IDE",
+        "Code Editor", 
+        "File Manager",
+        "Terminal"
+      ]
+    },
+    "gold": {
+      "name": "Gold Tier",
+      "price": 19.99,
+      "maxProjects": 50,
+      "maxStorage": "1GB",
+      "aiRequestsPerDay": 500,
+      "languageSupport": 25,
+      "features": [
+        "All Free Features",
+        "AI Assistant",
+        "Advanced Debugging",
+        "Cloud Storage",
+        "Collaboration"
+      ]
+    },
+    "platinum": {
+      "name": "Platinum Tier",
+      "price": 49.99,
+      "maxProjects": -1,
+      "maxStorage": "10GB",
+      "aiRequestsPerDay": -1,
+      "languageSupport": 25,
+      "features": [
+        "All Gold Features",
+        "Game Engine",
+        "Mobile Framework",
+        "Priority Support",
+        "Advanced Analytics"
+      ]
+    }
+  },
+  "ai": {
+    "openai": {
+      "model": "gpt-4o",
+      "maxTokens": 4000,
+      "temperature": 0.7,
+      "timeout": 30000
+    },
+    "agents": {
+      "codeCraft": { "enabled": true, "maxRequests": 100 },
+      "refactorPro": { "enabled": true, "maxRequests": 100 },
+      "bugSeeker": { "enabled": true, "maxRequests": 100 },
+      "docMaster": { "enabled": true, "maxRequests": 100 },
+      "architectAI": { "enabled": true, "maxRequests": 100 },
+      "speedBoost": { "enabled": true, "maxRequests": 100 },
+      "testCraft": { "enabled": true, "maxRequests": 100 }
+    }
+  },
+  "languages": {
+    "supported": [
+      "javascript", "typescript", "python", "java", "cpp", "c", "rust",
+      "go", "php", "ruby", "swift", "kotlin", "dart", "lua", "scala",
+      "haskell", "elixir", "crystal", "nim", "zig", "deno", "bun",
+      "csharp", "fsharp", "vb"
+    ],
+    "compilation": {
+      "timeout": 30000,
+      "memoryLimit": "512MB",
+      "outputLimit": "10MB"
+    },
+    "execution": {
+      "sandboxed": true,
+      "timeout": 10000,
+      "networkAccess": false
+    }
+  },
+  "fileSystem": {
+    "maxFileSize": "50MB",
+    "allowedExtensions": [
+      ".js", ".ts", ".py", ".java", ".cpp", ".c", ".rs", ".go", ".php",
+      ".rb", ".swift", ".kt", ".dart", ".lua", ".scala", ".hs", ".ex",
+      ".cr", ".nim", ".zig", ".cs", ".fs", ".vb", ".html", ".css",
+      ".json", ".xml", ".yaml", ".yml", ".md", ".txt", ".png", ".jpg",
+      ".jpeg", ".gif", ".svg", ".mp4", ".mp3", ".wav", ".pdf"
+    ],
+    "compressionFormats": ["zip", "tar", "tar.gz", "tar.bz2"],
+    "autoSave": {
+      "enabled": true,
+      "interval": 30000
+    },
+    "preview": {
+      "supportedFormats": ["image", "video", "audio", "text", "pdf"],
+      "maxPreviewSize": "10MB"
+    }
+  },
+  "ui": {
+    "theme": {
+      "default": "deepblue-dark",
+      "available": ["deepblue-dark", "deepblue-light", "dracula", "monokai", "solarized"]
+    },
+    "editor": {
+      "defaultFont": "JetBrains Mono",
+      "fontSize": 14,
+      "tabSize": 2,
+      "wordWrap": true,
+      "lineNumbers": true,
+      "minimap": true
+    },
+    "animations": {
+      "enabled": true,
+      "duration": 300,
+      "easing": "ease-in-out"
+    },
+    "notifications": {
+      "position": "bottom-right",
+      "duration": 5000,
+      "maxVisible": 5
+    }
+  },
+  "beta": {
+    "enabled": true,
+    "autoApproval": false,
+    "requiresVerification": true,
+    "maxBetaUsers": 1000,
+    "features": [
+      "AI Assistant",
+      "Game Engine", 
+      "Mobile Framework",
+      "Advanced Debugging"
+    ],
+    "tokenExpiry": 2592000000
+  },
+  "monitoring": {
+    "errorTracking": true,
+    "performanceMonitoring": true,
+    "userAnalytics": true,
+    "systemMetrics": true,
+    "logLevel": "debug"
+  },
+  "external": {
+    "stripe": {
+      "enabled": false
+    },
+    "github": {
+      "enabled": true,
+      "apiUrl": "https://api.github.com"
+    },
+    "cloudProviders": {
+      "aws": { "enabled": false },
+      "googleDrive": { "enabled": true },
+      "oneDrive": { "enabled": true },
+      "dropbox": { "enabled": true }
+    }
+  }
+}

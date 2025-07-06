@@ -1,0 +1,76 @@
+game-engine/
+│
+├── 📁 build/                         # Compiled/transpiled JS output (from TypeScript)
+│
+├── 📁 core/                          # Core engine logic in TypeScript
+│   ├── engine.ts                    # Engine bootstrap, lifecycle (init/start/stop)
+│   ├── loop.ts                      # Main game loop and frame update management
+│   └── config.ts                    # Global constants, engine configuration values
+│
+├── 📁 systems/                       # Game systems (ECS, input, audio, physics...)
+│   ├── ecs/                         # Entity-Component-System implementation
+│   │   ├── component.ts
+│   │   ├── entity.ts
+│   │   └── system.ts
+│   ├── physics/                     # Collision detection & physics updates
+│   │   └── physicsEngine.ts
+│   ├── audio/                       # Sound/music engine using WebAudio or Howler
+│   │   └── audioEngine.ts
+│   ├── render/                      # 2D/3D render system (Canvas/WebGL)
+│   │   └── renderer.ts
+│   ├── input/                       # Input handling (keyboard, mouse, gamepad)
+│   │   └── inputManager.ts
+│   └── animation/                   # Animation state machine or timeline player
+│       └── animator.ts
+│
+├── 📁 platform/                      # Platform-specific bindings (web, desktop, etc.)
+│   ├── web/                         # WebGL/WebAudio APIs, browser-specific I/O
+│   │   └── webPlatform.ts
+│   └── desktop/                     # Electron or native Node canvas wrappers
+│       └── desktopPlatform.ts
+│
+├── 📁 game/                          # Game logic lives here (not the engine)
+│   ├── main.ts                      # Game entry point (invokes engine)
+│   ├── scenes/                      # Scene or state logic (main menu, game world)
+│   │   └── mainScene.ts
+│   ├── objects/                     # Game object blueprints or prefabs
+│   │   └── player.ts
+│   └── scripts/                     # Custom behaviors and game scripts
+│       └── enemyAI.ts
+│
+├── 📁 assets/                        # Static game assets (not TypeScript)
+│   ├── sprites/                     # 2D textures/images
+│   ├── models/                      # 3D models (if applicable)
+│   ├── sounds/                      # Audio files (MP3, OGG, WAV)
+│   ├── fonts/                       # Web fonts or bitmap fonts
+│   └── shaders/                     # GLSL shaders
+│
+├── 📁 editor/                        # Optional in-game or browser-based level editor
+│   ├── ui/                          # Editor-specific UI components (React/Vue/etc.)
+│   │   └── inspectorPanel.tsx
+│   └── tools/                       # Map/asset/layout editing tools
+│       └── tilemapEditor.ts
+│
+├── 📁 tools/                         # External CLI tools or utilities
+│   ├── cli.ts                       # Custom engine CLI (init project, run, export)
+│   └── build-tools/                # Packaging, optimization scripts
+│       └── assetPacker.ts
+│
+├── 📁 tests/                         # Unit tests (e.g. using Vitest or Jest)
+│   ├── core.test.ts                # Test core engine logic
+│   └── systems/                    # System-level test cases
+│       └── physics.test.ts
+│
+├── 📁 docs/                          # Documentation
+│   └── architecture.md             # Project architecture overview
+│
+├── 📁 scripts/                       # Shell scripts for build/deploy
+│   ├── build.sh                    # Unix build helper (calls tsc or rollup)
+│   └── build.bat                   # Windows equivalent
+│
+├── .gitignore                       # Node + build artifacts to ignore
+├── LICENSE                          # License (MIT, GPL, etc.)
+├── README.md                        # Project description and usage
+├── package.json                     # Node project metadata and scripts
+├── tsconfig.json                    # TypeScript compiler config
+└── settings.ini                     # Optional engine settings/config
